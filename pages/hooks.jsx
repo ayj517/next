@@ -13,6 +13,7 @@ const Hooks = ({stars}) =>{
 
     return(
         <div>
+            <img src="https://ae01.alicdn.com/kf/U6ef9b0e030e9473c861b5466253474b1l.jpg" alt=""/>
             <ul>
                 {
                    stars.map((item,i)=>(
