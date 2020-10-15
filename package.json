@@ -3,15 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 5789",
+    "dev": "node server.js",
+    "dev2": "next dev -p 5789",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "date-fns": "^2.11.1",
+    "express": "^4.17.1",
     "fetch": "^1.1.0",
     "gray-matter": "^4.0.2",
+    "http-proxy-middleware": "^1.0.6",
     "next": "9.5.3",
     "node-sass": "^4.14.1",
     "react": "16.13.1",
