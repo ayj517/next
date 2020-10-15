@@ -28,6 +28,20 @@ const options = {
     // },
   };
 
+  const options2 = {
+    target: 'https://img2.doubanio.com', // target host
+    changeOrigin: true, // needed for virtual hosted sites
+    ws: true, // proxy websockets
+    pathRewrite: {
+      '^/img2': '/', // remove base path
+    },
+    // router: {
+    //   // when request.headers.host == 'dev.localhost:3000',
+    //   // override target 'http://www.example.org' to 'http://localhost:8000'
+    //   'https://movie.douban.com': 'http://localhost:5789',
+    // },
+  };
+
 const port = parseInt(process.env.PORT, 10) || 5789
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({
