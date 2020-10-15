@@ -1,27 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import request from 'umi-request';
+import { server } from '../config';
+// import fetch from 'fetch'
 import Layout, { siteTitle } from '../components/layout'
 
-const Hooks = () =>{
+const Hooks = ({stars}) =>{
     const [list,setList] = useState([])
+    
 
     useEffect(() => {
-        request.get('/api/movi')
-        .then(function (response) {
-          console.log(response);
-            setList(response)
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
+       
     }, []);
 
     return(
         <div>
             <ul>
                 {
-                   list &&  list.subjects && list.subjects.map((item)=>(
-                        <li>
+                   stars.map((item,i)=>(
+                        <li key={i}>
                             <img src={item.cover} alt=""/>
                             <h4>{item.title}</h4>
                         </li>
@@ -32,5 +28,20 @@ const Hooks = () =>{
         </div>
     )
 }
+
+Hooks.getInitialProps = async ({ req ,pathname}) => {
+    // const res = await fetch('https://api.github.com/repos/zeit/next.js')
+    let res2;
+    const res = await  request.get(`${server}/api/movi`)
+    .then(function (response) {
+        res2 =response
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+    // const json = await res.json()
+    return { stars: res2.subjects }
+  }
 
 export default Hooks
