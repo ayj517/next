@@ -1,0 +1,26 @@
+.movilist{
+    text-align: center;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1360px;
+    margin: 0 auto;
+    .img-box{
+        width: 100%;
+        height: 378px;
+        background-color: #f7f7f7;
+    }
+    img{
+        width: 100%;
+    }
+    li{
+        margin: 30px;
+        width: 270px;
+        height: 450px;
+
+    }
+}
+
+.m-banner{
+    width: 100%;
+}

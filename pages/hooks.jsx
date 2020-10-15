@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import request from 'umi-request';
 import { server } from '../config';
+import '../styles/movi.scss'
 import Layout, { siteTitle } from '../components/layout'
 
 const Hooks = ({stars}) =>{
@@ -13,12 +14,14 @@ const Hooks = ({stars}) =>{
 
     return(
         <div>
-            <img src="https://ae01.alicdn.com/kf/U6ef9b0e030e9473c861b5466253474b1l.jpg" alt=""/>
-            <ul>
+            <img className="m-banner" src="/images/ccc.png" alt=""/>
+            <ul className="movilist">
                 {
                    stars.map((item,i)=>(
                         <li key={i}>
-                            <img src={item.cover} alt=""/>
+                            <div className="img-box">
+                            <img src={'https://ae01.alicdn.com/kf/U6ef9b0e030e9473c861b5466253474b1l.jpg'} alt=""/>
+                            </div>
                             <h4>{item.title}</h4>
                         </li>
                     ))
