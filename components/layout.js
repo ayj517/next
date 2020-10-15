@@ -4,9 +4,8 @@ import '../styles/utils.scss'
 import Link from 'next/link'
 
 const name = '[Your Name]'
-export const siteTitle = 'Next.js Sample Website'
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home ,siteTitle='Next.js Sample Website'}) {
   return (
     <div className="container">
       <Head>

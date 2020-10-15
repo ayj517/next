@@ -1,16 +1,19 @@
 import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
+import Layout from '../components/layout'
 import '../styles/utils.scss'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
+import request from 'umi-request';
 
 export default function Home({ allPostsData }) {
+  
+ 
   return (
     <Layout home>
-      <Head>
+      {/* <Head>
         <title>{siteTitle}</title>
-      </Head>
+      </Head> */}
       <section className="headingMd">
         <p>[Your Self Introduction] 第二对对对次测试</p>
         <p>
@@ -42,7 +45,7 @@ export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
   return {
     props: {
-      allPostsData
+      allPostsData,
     }
   }
 }
