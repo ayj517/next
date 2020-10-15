@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import request from 'umi-request';
 import { server } from '../config';
-// import fetch from 'fetch'
 import Layout, { siteTitle } from '../components/layout'
 
 const Hooks = ({stars}) =>{
