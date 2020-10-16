@@ -565,13 +565,15 @@ export default (req, res) => {
 
         console.log('链接数据222库成功',collection)
 
-        collection.collection("movies").find({}).toArray(function(err, result) { // 返回集合中所有数据
-            console.log(result,err);
+        collection.collection("movies").find({}).limit(30).toArray(function(err, result) { // 返回集合中所有数据
+            // console.log(result,err);
+            console.log(result.length)
             client.close();
         });
         // client.close();
         console.log(err)
       });
+      console.log(2222223)
     res.status(200).json(list)
   }
   
