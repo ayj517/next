@@ -559,23 +559,9 @@ const list = {
 }
 
 export default (req, res) => {
-    client.connect(err => {
-        // perform actions on the collection object
-        const collection = client.db("sample_mflix");
+    
+      res.status(200).json(list)
 
-        console.log('链接数据222库成功',collection)
-
-        collection.collection("movies").find({}).limit(30).toArray(function(err, result) { // 返回集合中所有数据
-            // console.log(result,err);
-            console.log(result.length)
-            res.status(200).json(result)
-
-            client.close();
-        });
-        // client.close();
-        console.log(err)
-      });
-      console.log(2222223)
   }
   
     
