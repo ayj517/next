@@ -10,7 +10,6 @@ const Hooks = ({stars,resm}) =>{
     
 
     useEffect(() => {
-    console.log(resm)
     }, []);
 
     return(
@@ -52,9 +51,7 @@ Hooks.getInitialProps = async ({ req ,pathname}) => {
     let res3
     const res = await  request.get(`${server}/api/movi`)
     .then(function (response) {
-        console.log(1112221)
         res2 =response
-        console.log(res2)
     })
     .catch(function (error) {
       console.log(error);
@@ -63,9 +60,7 @@ Hooks.getInitialProps = async ({ req ,pathname}) => {
 
     const resm = await  request.get(`${server}/api/movi2`)
     .then(function (response) {
-        console.log(1112221)
         res3 =response
-        console.log(res2)
     })
     .catch(function (error) {
       console.log(error);
