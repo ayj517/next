@@ -1,27 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
 const url = require('url')
-// const uri = process.env.MONGODB_URI;
-// const client = new MongoClient(uri, { useNewUrlParser: true });
-
-// export default (req, res) => {
-//     client.connect(err => {
-//         // perform actions on the collection object
-//         console.log(123123)
-//         const collection = client.db("sample_mflix");
-
-//         console.log('链接数据222库成功')
-
-//         collection.collection("movies").find({}).limit(30).toArray(function(err, result) { // 返回集合中所有数据
-//             // console.log(result,err);
-//             console.log(result.length)
-//             res.status(200).json(result)
-
-//             client.close();
-//         });
-//         console.log(err)
-//       });
-//   }
-
 
 // Create cached connection variable
 let cachedDb = null
@@ -48,7 +26,7 @@ async function connectToDatabase(uri) {
 // The main, exported, function of the endpoint,
 // dealing with the request and subsequent response
 module.exports = async (req, res) => {
-    console.log('链接数据库')
+  console.log('链接数据库')
   // Get a database connection, cached or otherwise,
   // using the connection string environment variable as the argument
   const db = await connectToDatabase(process.env.MONGO_URL)

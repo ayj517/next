@@ -6,6 +6,8 @@ import Link from 'next/link'
 import Date from '../components/date'
 import request from 'umi-request';
 
+import { Alert } from 'antd';
+
 export default function Home({ allPostsData }) {
   
  
@@ -14,8 +16,9 @@ export default function Home({ allPostsData }) {
       {/* <Head>
         <title>{siteTitle}</title>
       </Head> */}
+      <Alert message="Success Text" type="success" />
       <section className="headingMd">
-        <p>[Your Self Introduction] 第二对对222对次dfgeafsddddg测试</p>
+        <p>[Your Self Introduc22tion] </p>
         <p>
           (This is a sample website - you’ll be building a site like this in{' '}
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
