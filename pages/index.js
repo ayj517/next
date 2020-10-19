@@ -15,7 +15,7 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head> */}
       <section className="headingMd">
-        <p>[Your Self Introduction] 第二对对对次测试</p>
+        <p>[Your Self Introduction] 第二对对222222对次测试</p>
         <p>
           (This is a sample website - you’ll be building a site like this in{' '}
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
